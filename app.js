@@ -17,11 +17,16 @@ var renderList = function(state, element) {
 };
 
 var listModifiers = function() {
-  var listDiv = $('
-  <div class="shopping-item-controls"><button class="shopping-item-toggle"><span class="button-label">check</span></button><button class="shopping-item-delete"><span class="button-label">delete</span></button></div>');
-  return $('.shopping-item').append(listHtml);
+  var listDiv = $('<div class="shopping-item-controls">' +
+                    '<button class="shopping-item-toggle">' +
+                      '<span class="button-label">check</span>' +
+                    '</button>' +
+                    '<button class="shopping-item-delete">' +
+                      '<span class="button-label">delete</span>' +
+                    '</button>' +
+                  '</div>');
+  $('.shopping-item').append(listDiv);
 };
-
 
 // Event listeners
 $('.js-shopping-list-form').submit(function(event) {
